@@ -1,0 +1,16 @@
+#1 Count lines in each FASTA file
+wc -l ../data/fasta/*.fasta 
+
+#2 Print sequence (without header) of E. coli genome
+tail -n +2 ../data/fasta/E.coli.fasta 
+
+#3 Count total number of nucleotides in E. coli genome
+tail -n +2 ../data/fasta/E.coli.fasta | tr -d '\n' | wc -c 
+
+#4 Count occurrences of "ATGC" in E. coli genome
+tail -n +2 ../data/fasta/E.coli.fasta | tr -d '\n' | grep -o 'ATGC' | wc -l 
+
+#5 Compute AT/GC ratio of E. coli genome
+tail -n +2 d../ata/fasta/E.coli.fasta | tr -d '\n' | awk '{A=gsub(/A/,""); T=gsub(/T/,""); G=gsub(/G/,""); C=gsub(/C/,""); print (A+T)/(G+C)}' 
+
+
