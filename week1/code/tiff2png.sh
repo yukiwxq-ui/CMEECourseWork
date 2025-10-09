@@ -28,7 +28,7 @@ if [ ${#tif_files[@]} -eq 0 ]; then
     exit 1
 fi
 
-# onvert each .tif to .png 
+# Convert each .tif to .png 
 for f in "${tif_files[@]}"; do
     echo "Converting $f ..."
     convert "$f" "$(basename "$f" .tif).png"
