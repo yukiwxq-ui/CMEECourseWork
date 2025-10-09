@@ -35,3 +35,17 @@ cat "$1" | tr -s "\t" "," > "$OUTFILE"
 echo "Done! File saved as $OUTFILE"
 exit 0
 
+# Test setup
+# Create a sample tab-delimited file
+# echo -e "Name\tAge\tCountry\nAlice\t23\tUK\nBob\t25\tUS" > test_tab.txt
+
+# Run the script
+# bash tabtocsv.sh test_tab.txt
+
+# Check the output
+# cat test_tab.txt.csv
+
+# Expected output
+# Name,Age,Country
+# Alice,23,UK
+# Bob,25,US
