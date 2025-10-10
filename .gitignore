@@ -1,2 +1,8 @@
 *~ 
 *.tmp
+week*/results/*
+week*/sandbox/*
+*.code-workspace
+
+# Keep directory structure with .gitkeep files
+!week*/results/.gitkeep
