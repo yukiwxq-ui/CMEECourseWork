@@ -58,7 +58,7 @@ CMEECourseWork/
 ├── README.md                 # Main repository README
 ├── temporary.tmp             # Temporary file
 ├── week1/                    # Week 1 - Shell scripting & LaTeX exercises
-│   ├── READMEWeek1.md        # Week 1 README
+│   ├── README.md             # Week 1 README
 │   ├── code/                 # Shell scripts and LaTeX examples
 │   │   ├── boilerplate.sh
 │   │   ├── CompileLaTeX.sh
