@@ -1,4 +1,9 @@
 #!/bin/sh
+# Author: Xiaoqi Wu, xiaoqi.wu22@imperial.ac.uk
+# Script: variables.sh
+# Description: Illustrates the use of variables
+# Usage: path/to/variables.sh
+# Date: Oct 2025
 
 ## Illustrates the use of variables 
 

@@ -1,4 +1,9 @@
 #!/bin/bash
+# Author: Xiaoqi Wu, xiaoqi.wu22@imperial.ac.uk
+# Script: CompileLaTeX.sh
+# Description: Compiles a LaTeX document and opens the resulting PDF
+# Usage: bash CompileLaTeX.sh <filename.tex>
+# Date: Oct 2025
 
 # Check if an argument is provided
 if [ -z "$1" ]; then
