@@ -508,8 +508,8 @@ No errors.
 FEEDBACK SUMMARY
 ======================================================================
 
-Scripts tested: 19
-Scripts successful: 17
+Scripts tested: 10
+Scripts successful: 8
 Scripts with errors: 2
 Warnings/Notes: 1
 
