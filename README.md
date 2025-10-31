@@ -9,6 +9,7 @@ This repository contains coursework for the **Computational Methods in Ecology a
 * **Bash/Shell (Week 1)**
 * **Python 3.12+ (Week 2)**
 * **R 4.0+ (Week 3)**
+* **Python & R (Week 4)**
 
 ## Dependencies
 
@@ -24,6 +25,11 @@ This repository contains coursework for the **Computational Methods in Ecology a
 ### R (Week 3)
 
 * Packages: `tidyverse`, `ggplot2`, `dplyr`, `readr`, `stringr`
+
+### Python & R (Week 4)
+
+* Python packages: `numpy`, `pandas`, `matplotlib`
+* R packages: `tidyverse`, `ggplot2`, `dplyr`, `readr`, `stringr`
 
 ## Installation
 
@@ -45,6 +51,12 @@ source env/bin/activate
 
 ```r
 install.packages(c("tidyverse", "ggplot2", "dplyr", "readr", "stringr"))
+```
+
+### Install Python packages
+
+```bash
+pip install numpy pandas matplotlib
 ```
 
 ## Project Structure and Usage
@@ -72,6 +84,12 @@ CMEECourseWork/
 │   ├── data/                  # R data files for analysis
 │   ├── results/               # Output plots and processed data
 │   └── sandbox/               # Practice or experimental R scripts
+│
+├── week4/
+│   ├── code/                  # Advanced R and Python scripts (regression, plotting, data wrangling)
+│   ├── data/                  # Ecological datasets for analysis
+│   ├── results/               # Figures, reports, and processed data
+│   └── sandbox/               # Experimental scripts
 │
 └── README.md                  # (This file)
 ```
@@ -105,6 +123,5 @@ git push origin main
 ## Author
 
 **Xiaoqi Wu**
-Email: [your.login@imperial.ac.uk](mailto:your.login@imperial.ac.uk)
+Email: [[xiaoqi.wu@imperial.ac.uk](mailto:xiaoqi.wu@imperial.ac.uk)]
 Imperial College London, Department of Life Sciences
-

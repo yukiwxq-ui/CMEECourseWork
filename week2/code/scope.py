@@ -31,7 +31,7 @@ a_function()
 
 print("After calling a_function, outside the function, the value of _a_global is (still)", _a_global)
 print("After calling a_function, outside the function, the value of _b_global is (still)", _b_global)
-print("After calling a_function, outside the function, the value of _a_local is ", _a_local)
+# print("After calling a_function, outside the function, the value of _a_local is ", _a_local)
 
 
 

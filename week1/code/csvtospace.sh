@@ -5,29 +5,34 @@
 # Usage: bash csvtospace.sh
 # Date: Oct 2025
 
-# Ask user for the input file name
-echo "Please enter the CSV file name (with path if not in current directory):"
+DEFAULT_FILE="../data/Temperatures/1800.csv"
+RESULTS_DIR="../results"
+
+echo "Please enter the CSV file name (with path if not in current directory)"
+echo "(Press Enter to use default: $DEFAULT_FILE):"
 read INPUTFILE
 
-# Check if user actually entered something
+# Use default if user hits Enter
 if [ -z "$INPUTFILE" ]; then
-    echo "Error: No input provided."
-    exit 1
+    INPUTFILE="$DEFAULT_FILE"
+    echo "Using default file: $INPUTFILE"
 fi
 
-# Check if file exists
+# Check file exists
 if [ ! -f "$INPUTFILE" ]; then
     echo "Error: File '$INPUTFILE' not found."
     exit 1
 fi
 
+# Create results directory if not exists
+mkdir -p "$RESULTS_DIR"
+
 # Generate output filename
 BASENAME="$(basename "$INPUTFILE" .csv)"
-OUTFILE="${BASENAME}_space.txt"
+OUTFILE="$RESULTS_DIR/${BASENAME}_space.txt"
 
-# Convert commas to spaces
 echo "Creating a space-separated version of $INPUTFILE ..."
-cat "$INPUTFILE" | tr -s "," " " > "$OUTFILE"
+tr ',' ' ' < "$INPUTFILE" > "$OUTFILE"
 
 echo "Done! Output saved as $OUTFILE"
 exit 0

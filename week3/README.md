@@ -1,118 +1,136 @@
-# Week 3: Biological Computing in R
+# Week 4: Advanced Biological Computing and Data Analysis in R and Python
 
 ## Brief Description
 
-This project introduces the use of **R programming** for biological data analysis. It covers key concepts such as vectors, data frames, loops, conditionals, and plotting. Students learn to apply R to analyse biological datasets, visualise results, and write reproducible scripts. This week builds foundational R skills that are essential for data handling and statistical computing in ecology, evolution, and conservation.
+This project builds on foundational R skills from Week 3 and introduces more advanced **R programming** concepts, as well as **Python scripting** for biological data analysis. Students explore data wrangling, linear regression, plotting, permutation tests, and reproducible reporting. The exercises cover ecological datasets and statistical techniques commonly used in ecology and evolution research.
 
 ## Languages
 
 * **R (version 4.0 or later)**
+* **Python (version 3.12 or later)**
 
 ## Dependencies
 
-The following R packages are recommended for running all exercises:
+Recommended R packages:
 
-* `tidyverse` – collection of packages for data manipulation and visualisation
-* `ggplot2` – for advanced plotting
-* `dplyr` – for data wrangling
-* `readr` – for reading and writing data files
-* `stringr` – for string manipulation
+* `tidyverse`, `ggplot2`, `dplyr`, `readr`, `stringr`
 
-To install them, run:
+Recommended Python packages:
+
+* `numpy`, `pandas`, `matplotlib`
+
+Install R packages:
 
 ```r
 install.packages(c("tidyverse", "ggplot2", "dplyr", "readr", "stringr"))
 ```
 
+Install Python packages:
+
+```bash
+pip install numpy pandas matplotlib
+```
+
 ## Installation
 
-R and RStudio can be installed using the following commands on Ubuntu:
+R and RStudio installation (Ubuntu):
 
 ```bash
 sudo apt-get update
 sudo apt-get install r-base
 ```
 
-Alternatively, download RStudio IDE from: [https://posit.co/download/rstudio/](https://posit.co/download/rstudio/)
+Python installation (Ubuntu):
 
-## Project Structure and Usage
+```bash
+sudo apt-get install python3 python3-pip
+```
 
-The **Week 3** directory contains all R scripts, datasets, and practical exercises for biological computing in R. Scripts are organised by topic to help you explore key programming and analytical skills progressively.
+Download RStudio IDE from [https://posit.co/download/rstudio/](https://posit.co/download/rstudio/)
 
-### Directory Tree
+## Project Structure with File Descriptions
 
 ```
-Week3/
-├── data/                        # Example datasets for exercises
-│   ├── trees.csv
-│   ├── results.csv
-│   └── example_data.txt
+Week4/
+├── data/                        # Example datasets
+│   ├── EcolArchives-E089-51-D1.csv       # Predator-prey dataset for exercises
+│   ├── KeyWestAnnualMeanTemperature.RData # Temperature data for Florida analysis
+│   ├── PoundHillData.csv                  # Experimental plant-herbivore dataset
+│   ├── PoundHillMetaData.csv              # Metadata describing Pound Hill experiment
+│   └── Results.txt                        # Text summary outputs from exercises
 │
-├── code/                        # R scripts for the week
-│   ├── basics.R                 # Basic R syntax, variables, data types
-│   ├── control_flow.R           # Loops, conditionals, and logic operations
-│   ├── data_structures.R        # Working with vectors, lists, and data frames
-│   ├── apply_family.R           # Using apply, lapply, sapply, etc.
-│   ├── plotting_basics.R        # Simple visualisation using base R and ggplot2
-│   ├── writing_functions.R      # Defining and using custom functions
-│   ├── vectorisation.R          # Speeding up code with vectorised operations
-│   ├── regular_expressions.R    # Using regex for text manipulation
-│   ├── csv_io.R                 # Reading/writing csv and txt files
-│   ├── stats_examples.R         # Examples of descriptive statistics
-│   └── sandbox/                 # Experimental scripts
-│       ├── test_snippets.R
-│       └── plot_practice.R
+├── code/                        # R and Python scripts
+│   ├── apply1.R                # Demonstrates use of apply() function in R
+│   ├── apply2.R                # Advanced examples of apply() family usage
+│   ├── browse.R                # Interactive exploration of objects and functions
+│   ├── DataWrang.R             # Data cleaning and wrangling exercises
+│   ├── debugme.py              # Python debugging examples
+│   ├── Florida.R               # Analysis and plotting of Florida temperature data
+│   ├── Girko.R                 # Generates Girko plots for matrix visualisation
+│   ├── LV1.py                  # Linear algebra examples in Python
+│   ├── MyBars.R                # Generates bar plots using ggplot2
+│   ├── MyFirstJupyterNb.ipynb # Jupyter notebook with interactive exercises
+│   ├── np                      # Placeholder or numpy-related exercise
+│   ├── plotLin.R               # Plotting linear regression results
+│   ├── PP_Regress.R            # Predator-prey regression analysis
+│   ├── PP_Regress_test.R       # Empty file for testing regression code
+│   ├── preallocate.R           # Demonstrates preallocation in R for efficiency
+│   ├── profileme2.py           # Python profiling exercises
+│   ├── profileme.py            # Original Python profiling examples
+│   ├── Ricker.R                # Simulation of Ricker population model
+│   ├── sample.R                # Sampling and randomisation examples
+│   ├── test_control_flow.py    # Python control flow testing
+│   ├── timeit                  # Timing script for performance tests
+│   ├── timeitme.py             # Python timing examples
+│   ├── TreeHeight.R            # Tree height calculation exercises
+│   ├── try.R                   # Demonstrates try() error handling in R
+│   ├── Vectorize1.R            # Vectorisation examples to speed up computations
+│   └── (x,y):                  # Placeholder file with unspecified content
 │
-├── results/                     # Output files and visualisations
-│   ├── summary_stats.txt
-│   ├── plots/
-│   │   ├── histogram_example.png
-│   │   └── scatterplot_example.png
-│   └── output_data.csv
+├── results/                     # Output files and figures
+│   ├── Florida_Temp_Permutation.pdf  # Permutation test figure for Florida data
+│   ├── Florida_Temp_Report.pdf       # PDF report of Florida temperature analysis
+│   ├── Florida_Temp_Report.tex       # LaTeX source for Florida report
+│   ├── Girko.pdf                     # Girko plot output
+│   ├── MyBars.pdf                    # Bar plot output
+│   ├── MyFirst-ggplot2-Figure.pdf   # Example ggplot2 figure
+│   ├── MyLinReg.pdf                  # Linear regression figure
+│   ├── PP_Regress.pdf                # Predator-prey regression plot
+│   ├── PP_Regress_Results.csv        # Regression results in CSV format
+│   ├── Pred_Prey_Overlay.pdf         # Overlay of predator-prey data
+│   ├── resource_vs_consumer.png      # Plot of resource vs consumer dynamics
+│   ├── time_vs_density.png           # Time series of population density
+│   ├── TreeHts.csv                   # Calculated tree heights
+│   └── Rplots.pdf                    # Generic R plots output
 │
-├── README.md                    # (This file)
-└── __init__.R                   # Marks folder as R module (optional)
+├── sandbox/                     # Empty folder for experimentation
+│
+└── README.md                    # (This file)
 ```
 
 ### How to Use
 
-Run scripts directly in R or RStudio:
+Run R scripts directly in R or RStudio:
 
 ```r
-source("code/basics.R")
+source("code/Florida.R")
 ```
 
-Or open an interactive R session:
-
-```r
-setwd("~/Documents/CMEECourseWork/Week3/")
-source("code/data_structures.R")
-```
-
-### Example: Generating Plots
-
-```r
-Rscript code/plotting_basics.R
-```
-
-This will generate figures saved automatically in the `results/plots/` directory.
-
-### Example: Running Scripts from Command Line
+Run Python scripts from the command line:
 
 ```bash
-Rscript code/control_flow.R
+python3 code/LV1.py
 ```
 
-### Example: Using Custom Functions
+Generate reports using R:
 
-```r
-source("code/writing_functions.R")
-my_function(data)
+```bash
+Rscript code/Florida.R
 ```
 
-## Author
+View figures and PDF outputs in the `results/` directory.
 
-**Xiaoqi Wu**
-Email: [xiaoqi.wu22@imperial.ac.uk]
-Imperial College London, Department of Life Sciences
+### Notes
 
+* `sandbox/` is reserved for experimental scripts.
+* Always ensure your working directory is set to `Week4/` to maintain correct relative paths.
