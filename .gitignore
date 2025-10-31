@@ -1,8 +1,14 @@
-*~ 
+# Temporary and backup files
+*~
 *.tmp
+*.code-workspace
+
+# Ignore results and sandbox folders in all weeks
 week*/results/*
 week*/sandbox/*
-*.code-workspace
 
 # Keep directory structure with .gitkeep files
 !week*/results/.gitkeep
+
+# Ignore myenv folder in CMEECourseWork (and parallel week folders)
+myenv/
