@@ -12,6 +12,5 @@ MyFunction <- function(Arg1, Arg2) {
 MyFunction(1,2) #test the function
 MyFunction("Riki","Tiki") #A different test
 
-source("boilerplate.R")
 ls(pattern = "MyFun*")
 class(MyFunction)

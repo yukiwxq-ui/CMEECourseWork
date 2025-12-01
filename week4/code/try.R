@@ -15,7 +15,7 @@ popn <- rnorm(50)
 
 hist(popn)
 
-lapply(1:15, function(i) doit(popn))
+# lapply(1:15, function(i) doit(popn))
 
 result <- lapply(1:15, function(i) try(doit(popn), FALSE))
 
