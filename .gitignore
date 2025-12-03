@@ -3,9 +3,11 @@
 *.tmp
 *.code-workspace
 
-# Ignore results and sandbox folders in all weeks
+# Ignore sandbox folders in all weeks
 
 week*/sandbox/*
+week*/handout
+week*/lecture
 
 # Keep directory structure with .gitkeep files
 !week*/results/.gitkeep
