@@ -2,7 +2,7 @@
 
 ## Brief Description
 
-This repository contains coursework for the **Computational Methods in Ecology and Evolution (CMEE)** programme. It includes weekly modules that build foundational skills in programming, data handling, and reproducible research. Each week focuses on a specific computational language or technique, progressing from shell scripting to Python and R.
+This repository contains coursework for the **Computational Methods in Ecology and Evolution (CMEE)** programme. It includes weekly modules that build foundational skills in programming, data handling, statistical modelling, and reproducible research. Each week focuses on a specific computational language or technique, progressing from shell scripting to Python, R, GLMs, and mixed modelling tools.
 
 ## Languages
 
@@ -10,6 +10,8 @@ This repository contains coursework for the **Computational Methods in Ecology a
 * **Python 3.12+ (Week 2)**
 * **R 4.0+ (Week 3)**
 * **Python & R (Week 4)**
+* **R (Week 5: Linear Models & Mixed Models)**
+* **R (Week 6: Generalised Linear Models / GLMs)**
 
 ## Dependencies
 
@@ -18,18 +20,38 @@ This repository contains coursework for the **Computational Methods in Ecology a
 * A Unix-based terminal (Linux/macOS recommended)
 * Git for version control
 
-### Python (Week 2)
+### Python (Week 2 & Week 4)
 
-* Optional libraries: `pytest`, `pandas`, `matplotlib`
+* Optional libraries:
 
-### R (Week 3)
+  * `pytest`
+  * `pandas`
+  * `matplotlib`
+  * `numpy`
 
-* Packages: `tidyverse`, `ggplot2`, `dplyr`, `readr`, `stringr`
+### R (Week 3, 5, 6)
 
-### Python & R (Week 4)
+Common packages:
 
-* Python packages: `numpy`, `pandas`, `matplotlib`
-* R packages: `tidyverse`, `ggplot2`, `dplyr`, `readr`, `stringr`
+* `tidyverse`
+* `ggplot2`
+* `dplyr`
+* `readr`
+* `stringr`
+
+#### Week 5 (Linear & Mixed Models)
+
+* `lme4`
+* `nlme`
+* `MASS`
+* `car`
+
+#### Week 6 (Generalised Linear Models)
+
+* `MASS`
+* `lme4`
+* `boot`
+* `DHARMa`
 
 ## Installation
 
@@ -50,7 +72,10 @@ source env/bin/activate
 ### Install R packages
 
 ```r
-install.packages(c("tidyverse", "ggplot2", "dplyr", "readr", "stringr"))
+install.packages(c(
+  "tidyverse", "ggplot2", "dplyr", "readr", "stringr",
+  "lme4", "nlme", "MASS", "car", "DHARMa"
+))
 ```
 
 ### Install Python packages
@@ -69,59 +94,72 @@ The repository is organised by week, each containing **code**, **data**, **resul
 CMEECourseWork/
 ├── week1/
 │   ├── code/                  # Shell scripting exercises
-│   ├── data/                  # Example datasets for shell tasks
-│   ├── results/               # Output from shell scripts
+│   ├── data/                  # Datasets for shell tasks
+│   ├── results/               # Script outputs
 │   └── sandbox/               # Testing and drafts
 │
 ├── week2/
-│   ├── code/                  # Python exercises (control flow, debugging, I/O)
-│   ├── data/                  # Data files used by Python scripts
-│   ├── results/               # Results such as alignment outputs
-│   └── sandbox/               # Experimental/test Python scripts
+│   ├── code/                  # Python scripts (I/O, debugging, alignment)
+│   ├── data/                  # CSV and text data
+│   ├── results/               # Sequence alignment results
+│   └── sandbox/               # Experimentation space
 │
 ├── week3/
-│   ├── code/                  # R exercises (data handling, plotting, stats)
-│   ├── data/                  # R data files for analysis
-│   ├── results/               # Output plots and processed data
-│   └── sandbox/               # Practice or experimental R scripts
+│   ├── code/                  # R scripts (data handling, visualisation)
+│   ├── data/                  # Input files for R
+│   ├── results/               # Plots and processed outputs
+│   └── sandbox/               # Extra work and drafts
 │
 ├── week4/
-│   ├── code/                  # Advanced R and Python scripts (regression, plotting, data wrangling)
-│   ├── data/                  # Ecological datasets for analysis
-│   ├── results/               # Figures, reports, and processed data
+│   ├── code/                  # Advanced Python & R analyses
+│   ├── data/                  # Ecological datasets
+│   ├── results/               # Figures and processed data
 │   └── sandbox/               # Experimental scripts
 │
-└── README.md                  # (This file)
+├── week5/
+│   ├── code/                  # R scripts for LM, ANOVA, LMMs
+│   ├── data/                  # CSV/TXT data for model fitting
+│   ├── handout/               # PDFs for linear/mixed models
+│   ├── lecture/               # Lecture slide decks
+│   └── 2025SandBoxData/       # Additional datasets (bird migration, ants)
+│
+├── week6/
+│   ├── code/                  # R scripts for GLMs (Poisson, binomial, NB)
+│   ├── data/                  # GLM datasets (bees, chytrid, fisheries, etc.)
+│   ├── handout/               # GLM handouts & Zuur (2010) protocol
+│   └── lecture/               # GLM lecture slides
+│
+└── README.md                  # Main repository README
 ```
 
-### How to Use
+## How to Use
 
-Navigate into a weekly folder and run the relevant scripts:
+Run scripts by navigating into the correct week and executing with Python or R.
+
+### Python example
 
 ```bash
 cd week2/code
 python3 align_seqs.py
 ```
 
-Or, for R:
+### R example
 
 ```bash
 cd week3/code
 Rscript control_flow.R
 ```
 
-### Example: Git Usage
-
-Commit progress regularly and push updates to your remote repository:
+### Git usage example
 
 ```bash
 git add .
-git commit -m "Updated Week 2 exercises"
+git commit -m "Updated Week 6 GLM scripts"
 git push origin main
 ```
 
 ## Author
 
 **Xiaoqi Wu**
-Email: [[xiaoqi.wu@imperial.ac.uk](mailto:xiaoqi.wu@imperial.ac.uk)]
+Email: [xiaoqi.wu@imperial.ac.uk](mailto:xiaoqi.wu@imperial.ac.uk)
 Imperial College London, Department of Life Sciences
