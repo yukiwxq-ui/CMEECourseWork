@@ -8,8 +8,7 @@
 week*/sandbox/*
 week*/handout
 week*/lecture
-week5/
-week6/
+
 
 # Keep directory structure with .gitkeep files
 !week*/results/.gitkeep
