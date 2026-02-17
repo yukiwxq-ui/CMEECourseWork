@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Bootcamp_Assessment_YukiWu_yw6022</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Bootcamp_Assessment_YukiWu_yw6022</h1>
+</header>
+<h1 id="bootcamp-assessment-yuki-wu">Bootcamp Assessment: Yuki Wu</h1>
+<h2 id="execution-results">Execution results</h2>
+<ul>
+<li>Scripts tested: <strong>61</strong></li>
+<li>Successful: <strong>54</strong></li>
+<li>Errors: <strong>7</strong></li>
+<li>Notable failures:
+<ul>
+<li>Multiple Week 1 shell scripts exit non-zero due to <strong>missing
+required arguments</strong> (usage printed).</li>
+<li><code>DataWrang.R</code> <strong>timed out</strong> (exit
+<code>-9</code>).</li>
+<li><code>LV1.py</code> failed due to missing dependency
+(<strong>numpy</strong>).</li>
+</ul></li>
+</ul>
+<h2 id="script-specific-feedback">Script-Specific Feedback</h2>
+<blockquote>
+<p>Representative scripts chosen to cover: strong examples, assigned
+scripts, execution issues, and common style/robustness problems.</p>
+</blockquote>
+<h3 id="tautocorr.r">TAutoCorr.R</h3>
+<p><strong>Status:</strong> Success (validated run completed; outputs
+written)</p>
+<p><strong>Evidence (from LOG):</strong> - Exit code: 0 - Command:
+<code>cd "week6/code" &amp;&amp; Rscript --vanilla --slave TAutoCorr.R</code>
+- Timed out: No - Output validation: Not reported in LOG - Stdout/Stderr
+indicates outputs: <code>../results/autocorr_results.txt</code>,
+<code>../results/permutation_histogram.png</code></p>
+<p><strong>Rubric relevance:</strong> - Criterion 2 - Criterion 3 -
+Criterion 8 - Criterion 9 - Criterion 10 - Criterion 11</p>
+<ul>
+<li>Strong evidence of meeting the core autocorrelation +
+permutation-test task; clear intention to generate reusable
+outputs.</li>
+</ul>
+<p><strong>Improvement suggestion:</strong> Avoid
+<code>install.packages()</code> inside the script (can fail on
+offline/locked-down systems). Prefer a guard that <em>checks</em> for
+packages and instructs the user to install them, or vendor a
+renv/requirements approach if taught.</p>
+<h3 id="datawrang.r">DataWrang.R</h3>
+<p><strong>Status:</strong> Present but not validated (timed out)</p>
+<p><strong>Evidence (from LOG):</strong> - Exit code: -9 - Command:
+<code>cd "week4/code" &amp;&amp; Rscript --vanilla --slave DataWrang.R</code>
+- Timed out: Yes - Output validation: Not reported in LOG - Timed out
+during execution (LOG reports <code>Timed out: Yes</code>).</p>
+<p><strong>Rubric relevance:</strong> - Criterion 2 - Criterion 8 -
+Criterion 9</p>
+<ul>
+<li>Code exists and starts producing output, but the automated run
+exceeded time limits; this is treated as <em>present but not
+validated</em> (not missing).</li>
+</ul>
+<p><strong>Improvement suggestion:</strong> Add early
+<code>head()</code>/sampling options and avoid printing large objects;
+profile hotspots and consider vectorisation / limiting expensive
+operations.</p>
+<h3 id="lv1.py">LV1.py</h3>
+<p><strong>Status:</strong> Error (missing dependency)</p>
+<p><strong>Evidence (from LOG):</strong> - Exit code: 1 - Command:
+<code>cd "week4/code" &amp;&amp; python3 LV1.py</code> - Timed out: No -
+Output validation: Not reported in LOG - Error:
+<code>ModuleNotFoundError: No module named 'numpy'</code></p>
+<p><strong>Rubric relevance:</strong> - Criterion 2 - Criterion 8</p>
+<ul>
+<li>The script assumes a non-standard library dependency that is not
+available in the clean test environment.</li>
+</ul>
+<p><strong>Improvement suggestion:</strong> If numpy is required,
+document it explicitly and/or provide a pure-Python fallback. For
+bootcamp portability, prefer standard library unless the course
+specifies otherwise.</p>
+<h3 id="compilelatex.sh">CompileLaTeX.sh</h3>
+<p><strong>Status:</strong> Error (argument required)</p>
+<p><strong>Evidence (from LOG):</strong> - Exit code: 1 - Command:
+<code>cd "week1/code" &amp;&amp; bash CompileLaTeX.sh</code> - Timed
+out: No - Output validation: Not reported in LOG - Printed usage:
+<code>Usage: bash CompileLaTeX.sh &lt;filename.tex&gt;</code></p>
+<p><strong>Rubric relevance:</strong> - Criterion 2 - Criterion 4 -
+Criterion 8</p>
+<ul>
+<li>The script is functional as a helper but fails under automated
+execution because it requires an argument.</li>
+</ul>
+<p><strong>Improvement suggestion:</strong> Provide a safe default
+(e.g., compile a known <code>.tex</code> in the same directory) or make
+the script detect and list available <code>.tex</code> files with a
+clearer message.</p>
+<h3 id="countlines.sh">CountLines.sh</h3>
+<p><strong>Status:</strong> Error (argument required)</p>
+<p><strong>Evidence (from LOG):</strong> - Exit code: 1 - Command:
+<code>cd "week1/code" &amp;&amp; bash CountLines.sh</code> - Timed out:
+No - Output validation: Not reported in LOG - Printed usage:
+<code>Error: One argument expected. Usage: bash CountLines.sh &lt;inputfile&gt;</code></p>
+<p><strong>Rubric relevance:</strong> - Criterion 2 - Criterion 8</p>
+<ul>
+<li>Same pattern as above: script likely works interactively, but the
+autograder calls it without args.</li>
+</ul>
+<p><strong>Improvement suggestion:</strong> Support <code>stdin</code>
+or a default demo file; alternatively, modify the course runner
+expectations (staff-side) if arguments are intended.</p>
+<h3 id="tabtocsv.sh">tabtocsv.sh</h3>
+<p><strong>Status:</strong> Error (argument required)</p>
+<p><strong>Evidence (from LOG):</strong> - Exit code: 1 - Command:
+<code>cd "week1/code" &amp;&amp; bash tabtocsv.sh</code> - Timed out: No
+- Output validation: Not reported in LOG - Exited non-zero during
+automated run (likely requires filename argument; no stderr
+captured).</p>
+<p><strong>Rubric relevance:</strong> - Criterion 2 - Criterion 8</p>
+<ul>
+<li>Appears to be an argument-driven utility script; autograder
+run-without-args triggers failure.</li>
+</ul>
+<p><strong>Improvement suggestion:</strong> Add input validation plus a
+default (or a <code>--help</code> path that exits 0 when no args).</p>
+<h3 id="align_seqs_fasta.py">align_seqs_fasta.py</h3>
+<p><strong>Status:</strong> Success</p>
+<p><strong>Evidence (from LOG):</strong> - Exit code: 0 - Command:
+<code>cd "week4/code" &amp;&amp; python3 align_seqs_fasta.py</code> -
+Timed out: No - Output validation: Not reported in LOG</p>
+<p><strong>Rubric relevance:</strong> - Criterion 2 - Criterion 3 -
+Criterion 9</p>
+<ul>
+<li>Runs cleanly in the test environment, suggesting good portability
+and baseline correctness.</li>
+</ul>
+<p><strong>Improvement suggestion:</strong> Add docstrings for key
+functions and ensure CLI arguments (if any) have explicit help/usage
+output.</p>
+<h3 id="oaks_debugme.py">oaks_debugme.py</h3>
+<p><strong>Status:</strong> Success</p>
+<p><strong>Evidence (from LOG):</strong> - Exit code: 0 - Command:
+<code>cd "week4/code" &amp;&amp; python3 oaks_debugme.py</code> - Timed
+out: No - Output validation: Not reported in LOG</p>
+<p><strong>Rubric relevance:</strong> - Criterion 2 - Criterion 9 -
+Criterion 11</p>
+<ul>
+<li>Successful run indicates engagement with debugging and iteration
+tasks.</li>
+</ul>
+<p><strong>Improvement suggestion:</strong> Keep a short note in the
+week README summarising what was fixed and what you learned—this
+strengthens progression evidence.</p>
+<h2 id="detailed-evaluation-tautocorr.r">Detailed Evaluation:
+TAutoCorr.R</h2>
+<h3 id="a.-specification-alignment">A. Specification Alignment</h3>
+<ul>
+<li><p><strong>Relative paths / no interactive input:</strong> Uses
+<code>../data/KeyWestAnnualMeanTemperature.RData</code> and writes to
+<code>../results/</code> with no prompts →
+<strong>Matches</strong>.</p></li>
+<li><p><strong>Successive-year pairs:</strong> Computes
+<code>cor(temp[1:(n-1)], temp[2:n])</code> → <strong>Matches</strong>
+the adjacent-year requirement.</p></li>
+<li><p><strong>Permutation test:</strong> Permutes the temperature
+series with <code>sample(temp)</code> and recomputes adjacent-year
+correlation for each permutation → <strong>Matches</strong>.</p></li>
+<li><p><strong>Permutation p-value:</strong> Uses a two-sided
+permutation p-value <code>P(|r_perm| &gt;= |r_obs|)</code> →
+<strong>Partially matches</strong> (metadata specifies ≥ observed; does
+not forbid two-sided, but the script should justify two-sided vs
+one-sided).</p></li>
+<li><p><strong>Avoids <code>cor.test()</code> p-value as final
+result:</strong> Does not use <code>cor.test()</code> for inference →
+<strong>Matches</strong>.</p></li>
+</ul>
+<h3 id="b.-conceptual-understanding-of-autocorrelation">B. Conceptual
+Understanding of Autocorrelation</h3>
+<ul>
+<li>Clear focus on <strong>lag-1 (successive-year) dependence</strong>
+by aligning <code>Temp[t]</code> with <code>Temp[t+1]</code>.</li>
+<li>Permutation approach correctly breaks temporal order to form a null
+distribution.</li>
+<li>Interpretation is included in the generated text summary
+(thresholded messages), which supports conceptual framing.</li>
+</ul>
+<h3 id="c.-algorithmic-implementation-depth">C. Algorithmic
+Implementation Depth</h3>
+<ul>
+<li>Implements the core algorithm compactly and correctly (adjacent
+vectors + looped permutations).</li>
+<li>Uses preallocation (<code>numeric(nperm)</code>), which is good
+practice.</li>
+<li>Uses ggplot2 for a publication-quality histogram and saves a
+high-resolution PNG.</li>
+<li>Potential issue for robustness: installing packages inside the
+script can be slow/unreliable in controlled environments.</li>
+</ul>
+<h3 id="d.-statistical-computational-rigor">D. Statistical &amp;
+Computational Rigor</h3>
+<ul>
+<li>Uses <code>cor()</code> for the observed and permuted correlations
+(Pearson by default). This is acceptable unless the assignment specified
+Spearman (metadata does not).</li>
+<li>Two-sided permutation p-value is conservative; if the scientific
+question is directional (positive persistence), a one-sided p-value may
+be more aligned—worth noting in the report.</li>
+</ul>
+<h3 id="e.-error-handling-robustness">E. Error Handling &amp;
+Robustness</h3>
+<ul>
+<li>Creates <code>../results</code> if absent (good guard clause).</li>
+<li>Does not explicitly check that <code>ats</code> exists after
+<code>load()</code> or that <code>Temp</code> has sufficient length / no
+NAs; these are minor but would strengthen Criterion 8 evidence.</li>
+</ul>
+<h3 id="f.-comparison-with-example-solution">F. Comparison with Example
+Solution</h3>
+<ul>
+<li><strong>Similarities:</strong>
+<ul>
+<li>Both load <code>KeyWestAnnualMeanTemperature.RData</code> via a
+relative path.</li>
+<li>Both compute adjacent-year correlation and build a permutation
+distribution under random reordering.</li>
+</ul></li>
+<li><strong>Key omissions (relative to example):</strong>
+<ul>
+<li>Example wraps the correlation calculation in a function; your script
+is mostly linear (still clear, but less modular).</li>
+<li>Example produces exploratory plots of the time series and lag plot;
+your script focuses on the permutation histogram (fine, but adding the
+lag plot would strengthen communication).</li>
+</ul></li>
+<li><strong>Conceptual gaps:</strong>
+<ul>
+<li>Main conceptual choice to clarify is <strong>two-sided vs
+one-sided</strong> p-value definition.</li>
+</ul></li>
+<li><strong>Improvements beyond example:</strong>
+<ul>
+<li>Preallocation and clean output writing
+(<code>autocorr_results.txt</code>) plus a saved high-resolution figure
+are clear enhancements.</li>
+</ul></li>
+</ul>
+<h3 id="g.-required-script-level-reporting-block">G. Required
+Script-Level Reporting Block</h3>
+<h3 id="tautocorr.r-1">TAutoCorr.R</h3>
+<p><strong>Status:</strong> Success</p>
+<p><strong>Specification alignment:</strong> Mostly matches (relative
+paths; adjacent-year correlation; permutation test). Two-sided p-value
+used—needs brief justification.</p>
+<p><strong>Algorithmic evaluation:</strong> Correct adjacent indexing;
+preallocated permutation vector; reproducible seed; writes outputs.</p>
+<p><strong>Conceptual understanding:</strong> Clear lag-1 framing and
+permutation null.</p>
+<p><strong>Statistical correctness:</strong> Correlation computed
+appropriately; permutation p-value computed appropriately
+(two-sided).</p>
+<p><strong>Rubric relevance:</strong> - Criterion 2 - Criterion 3 -
+Criterion 8 - Criterion 9 - Criterion 10 - Criterion 11</p>
+<ul>
+<li>Strong groupwork script with clear outputs; portability risk from
+in-script package installation.</li>
+</ul>
+<p><strong>Improvement suggestion:</strong> Add explicit input checks
+(file exists, <code>Temp</code> length ≥ 3, NA handling) and move
+dependency installation out of the script.</p>
+<h2 id="problem-solving-evidence">Problem-solving evidence</h2>
+<ul>
+<li>Substantial breadth of scripts across weeks (weeks 1–6
+present).</li>
+<li>Extra exploratory scripts (week5/week6 glm scripts; additional
+alignment variants) suggest experimentation beyond minimum.</li>
+<li>Debugging engagement evidenced by successful runs of
+debugging-focused scripts (e.g., <code>oaks_debugme.py</code>).</li>
+</ul>
+<h2 id="reporting-evidence">Reporting evidence</h2>
+<ul>
+<li>Strong README coverage: main README + per-week READMEs present
+(6/6), and high overall documentation ratio (≈70.7% per LOG).</li>
+<li>TAutoCorr outputs include a results text file and a figure; LaTeX
+compilation helper exists but automated run requires args.</li>
+</ul>
+<h2 id="overall-feedback">Overall feedback</h2>
+<ul>
+<li><p><strong>Keep doing:</strong> Your documentation footprint is
+excellent for a bootcamp repo (main + per-week READMEs, good
+commenting). <code>TAutoCorr.R</code> is a standout: reproducible,
+produces clean outputs, and shows good computational habits
+(preallocation, saved figures/results).</p></li>
+<li><p><strong>Biggest next wins:</strong></p>
+<ol type="1">
+<li><strong>Recover missing expected scripts</strong> (especially
+assigned ones like <code>PP_Dists.R</code> and
+<code>cfexercises1.py</code>). If you intentionally renamed variants
+(e.g., <code>cfexcercises1.py</code>), align names to the expected list
+to avoid “missing” classification.</li>
+<li><strong>Make utility shell scripts autograder-friendly</strong>:
+either accept defaults or exit successfully with <code>--help</code>
+when called without args.</li>
+<li><strong>Tighten portability</strong>: avoid committing
+<code>__pycache__</code>, <code>.RData</code>, <code>.Rhistory</code>,
+<code>.DS_Store</code>, and generated PDFs/logs; expand
+<code>.gitignore</code> accordingly.</li>
+<li><strong>Error handling</strong>: add small guard clauses (file
+existence, argument checks, NA/short-vector checks) for assigned scripts
+to lift Criterion 8.</li>
+</ol></li>
+</ul>
+<h2 id="priority-fixes">Priority fixes</h2>
+<ol type="1">
+<li>Rename/restore missing expected scripts (especially assigned ones)
+to match the expected list exactly (case-sensitive).</li>
+<li>Expand <code>.gitignore</code> to exclude Python/R caches and
+OS/editor artifacts; remove committed generated files where
+appropriate.</li>
+<li>Update Week 1 shell utilities to behave sensibly with no-arg
+execution (or document required args clearly and ensure the testing
+harness matches).</li>
+<li>Add lightweight guard clauses in assigned scripts (file existence,
+argument presence, NA/length checks).</li>
+<li>In <code>TAutoCorr.R</code>, move dependency installation out of the
+script and add short input/NA checks.</li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p>Very good job! Overall submission shows <strong>strong
+engagement</strong> with the bootcamp material. The main issues were
+<strong>missing expected scripts</strong>, poor argument handling in
+several shell scripts, and <strong>weak evidence of error
+handling</strong> in assigned scripts.</p>
+<h2 id="mark-classification">Mark classification</h2>
+<!-- Total Mark: 74/100 -->
+<p>Classification: Distinction</p>
+</body>
+</html>
